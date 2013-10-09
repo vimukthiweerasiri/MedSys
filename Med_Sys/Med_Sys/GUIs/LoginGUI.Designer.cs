@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.uname = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
+            this.buttonlogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -66,11 +67,22 @@
             this.password.Size = new System.Drawing.Size(204, 20);
             this.password.TabIndex = 3;
             // 
+            // buttonlogin
+            // 
+            this.buttonlogin.Location = new System.Drawing.Point(448, 151);
+            this.buttonlogin.Name = "buttonlogin";
+            this.buttonlogin.Size = new System.Drawing.Size(75, 23);
+            this.buttonlogin.TabIndex = 4;
+            this.buttonlogin.Text = "Login";
+            this.buttonlogin.UseVisualStyleBackColor = true;
+            this.buttonlogin.Click += new System.EventHandler(this.buttonlogin_Click);
+            // 
             // LoginGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 242);
+            this.Controls.Add(this.buttonlogin);
             this.Controls.Add(this.password);
             this.Controls.Add(this.uname);
             this.Controls.Add(this.label2);
@@ -88,6 +100,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox uname;
         private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.Button buttonlogin;
     }
 }
 
