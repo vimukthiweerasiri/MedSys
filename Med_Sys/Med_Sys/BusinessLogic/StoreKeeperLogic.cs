@@ -44,6 +44,15 @@ namespace Med_Sys.BusinessLogic
             return dr;
         }
 
+        public int updateDB(string stkId,string medID,string Medname,string form,string dose,string qty,string exdate)
+        {
+            
+            connection.conOpen();
+            string sqlcmd = "insert into MedicineStock values ('"+stkId+"','"+medID+"','"+Medname+"','"+form+"','"+dose+"',"+qty+",'"+exdate+"',0);";
+            SqlCommand cmd = connection.getSqlCommand(sqlcmd);
+            int stat = cmd.ExecuteNonQuery();
+            return stat;
+        }
 
 
 

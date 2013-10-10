@@ -47,6 +47,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonselect = new System.Windows.Forms.Button();
+            this.buttonremove = new System.Windows.Forms.Button();
+            this.buttonfin = new System.Windows.Forms.Button();
+            this.buttonexpirycheck = new System.Windows.Forms.Button();
+            this.buttonstock = new System.Windows.Forms.Button();
+            this.qtyident = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagridGRN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +70,7 @@
             this.form.Name = "form";
             this.form.Size = new System.Drawing.Size(121, 21);
             this.form.TabIndex = 0;
+            this.form.SelectedValueChanged += new System.EventHandler(this.form_SelectedValueChanged);
             // 
             // dose
             // 
@@ -78,8 +84,9 @@
             // 
             this.qty.Location = new System.Drawing.Point(467, 68);
             this.qty.Name = "qty";
-            this.qty.Size = new System.Drawing.Size(110, 20);
+            this.qty.Size = new System.Drawing.Size(73, 20);
             this.qty.TabIndex = 1;
+            this.qty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.qty_KeyPress);
             // 
             // datepicker
             // 
@@ -202,11 +209,64 @@
             this.buttonselect.UseVisualStyleBackColor = true;
             this.buttonselect.Click += new System.EventHandler(this.buttonselect_Click);
             // 
+            // buttonremove
+            // 
+            this.buttonremove.Location = new System.Drawing.Point(23, 127);
+            this.buttonremove.Name = "buttonremove";
+            this.buttonremove.Size = new System.Drawing.Size(75, 23);
+            this.buttonremove.TabIndex = 6;
+            this.buttonremove.Text = "Remove";
+            this.buttonremove.UseVisualStyleBackColor = true;
+            this.buttonremove.Click += new System.EventHandler(this.buttonremove_Click);
+            // 
+            // buttonfin
+            // 
+            this.buttonfin.Location = new System.Drawing.Point(679, 357);
+            this.buttonfin.Name = "buttonfin";
+            this.buttonfin.Size = new System.Drawing.Size(75, 23);
+            this.buttonfin.TabIndex = 7;
+            this.buttonfin.Text = "Finish";
+            this.buttonfin.UseVisualStyleBackColor = true;
+            this.buttonfin.Click += new System.EventHandler(this.buttonfin_Click);
+            // 
+            // buttonexpirycheck
+            // 
+            this.buttonexpirycheck.Location = new System.Drawing.Point(23, 356);
+            this.buttonexpirycheck.Name = "buttonexpirycheck";
+            this.buttonexpirycheck.Size = new System.Drawing.Size(154, 23);
+            this.buttonexpirycheck.TabIndex = 8;
+            this.buttonexpirycheck.Text = "To Be Expired";
+            this.buttonexpirycheck.UseVisualStyleBackColor = true;
+            this.buttonexpirycheck.Click += new System.EventHandler(this.buttonexpirycheck_Click);
+            // 
+            // buttonstock
+            // 
+            this.buttonstock.Location = new System.Drawing.Point(23, 411);
+            this.buttonstock.Name = "buttonstock";
+            this.buttonstock.Size = new System.Drawing.Size(154, 23);
+            this.buttonstock.TabIndex = 8;
+            this.buttonstock.Text = "Current Stock";
+            this.buttonstock.UseVisualStyleBackColor = true;
+            this.buttonstock.Click += new System.EventHandler(this.buttonstock_Click);
+            // 
+            // qtyident
+            // 
+            this.qtyident.AutoSize = true;
+            this.qtyident.Location = new System.Drawing.Point(546, 75);
+            this.qtyident.Name = "qtyident";
+            this.qtyident.Size = new System.Drawing.Size(0, 13);
+            this.qtyident.TabIndex = 9;
+            // 
             // StoreKeeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 562);
+            this.Controls.Add(this.qtyident);
+            this.Controls.Add(this.buttonstock);
+            this.Controls.Add(this.buttonexpirycheck);
+            this.Controls.Add(this.buttonfin);
+            this.Controls.Add(this.buttonremove);
             this.Controls.Add(this.buttonselect);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -248,5 +308,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn qtycol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Expdatecol;
         private System.Windows.Forms.Button buttonselect;
+        private System.Windows.Forms.Button buttonremove;
+        private System.Windows.Forms.Button buttonfin;
+        private System.Windows.Forms.Button buttonexpirycheck;
+        private System.Windows.Forms.Button buttonstock;
+        private System.Windows.Forms.Label qtyident;
     }
 }
