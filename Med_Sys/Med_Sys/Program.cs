@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Med_Sys.GUIs;
 
 namespace Med_Sys
 {
@@ -16,7 +17,7 @@ namespace Med_Sys
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginGUI());
+            Application.Run(new StoreKeeper());
         }
     }
 }

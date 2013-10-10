@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\StoreKeeperLogic.cs" />
     <Compile Include="BusinessLogic\LoginLogic.cs" />
     <Compile Include="DataAccess\Connection.cs" />
     <Compile Include="DBMS.Designer.cs">
@@ -72,10 +73,19 @@
     <Compile Include="GUIs\LoginGUI.Designer.cs">
       <DependentUpon>LoginGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUIs\StoreKeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\StoreKeeper.Designer.cs">
+      <DependentUpon>StoreKeeper.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUIs\LoginGUI.resx">
       <DependentUpon>LoginGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\StoreKeeper.resx">
+      <DependentUpon>StoreKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
