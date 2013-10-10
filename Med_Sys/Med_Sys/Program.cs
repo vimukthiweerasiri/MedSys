@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Med_Sys.GUIs;
+using Med_Sys.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
