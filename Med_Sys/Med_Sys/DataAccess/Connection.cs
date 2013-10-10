@@ -14,6 +14,11 @@ namespace Med_Sys.DataAccess
         
         public Connection()
         {
+            conOpen();
+        }
+
+        public void conOpen()
+        {
             sqlconnection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Dinal\Documents\GIThub\MedSys\Med_Sys\Med_Sys\Database1.mdf;Integrated Security=True");
             sqlconnection.Open();
         }
