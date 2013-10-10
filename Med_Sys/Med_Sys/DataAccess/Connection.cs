@@ -11,12 +11,7 @@ namespace Med_Sys.DataAccess
     {
         protected SqlConnection sqlconnection;
         private SqlCommand command;
-<<<<<<< HEAD
         
-=======
-
-
->>>>>>> akshika
         public Connection()
         {
             conOpen();
@@ -24,19 +19,11 @@ namespace Med_Sys.DataAccess
 
         public void conOpen()
         {
-<<<<<<< HEAD
             sqlconnection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Dinal\Documents\GIThub\MedSys\Med_Sys\Med_Sys\Database1.mdf;Integrated Security=True");
             sqlconnection.Open();
         }
 
         public void conClose() 
-=======
-            sqlconnection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\user\Documents\MyGitHub\MedSys\Med_Sys\Med_Sys\Database1.mdf;Integrated Security=True;Connect Timeout=30");
-            sqlconnection.Open();
-        }
-
-        public void conClose()
->>>>>>> akshika
         {
             sqlconnection.Close();
         }
@@ -48,7 +35,6 @@ namespace Med_Sys.DataAccess
         }
 
         public SqlDataAdapter getSqlDataAdapter(string scom)
-<<<<<<< HEAD
         { 
             SqlDataAdapter sqldataad = new SqlDataAdapter(scom, sqlconnection);
             return sqldataad;
@@ -57,13 +43,3 @@ namespace Med_Sys.DataAccess
     }
     
 }
-=======
-        {
-            SqlDataAdapter sqldataad = new SqlDataAdapter(scom, sqlconnection);
-            return sqldataad;
-        }
-
-    }
-
-}
->>>>>>> akshika
